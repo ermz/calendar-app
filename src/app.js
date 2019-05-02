@@ -1,6 +1,11 @@
 const path = require('path')
 const express = require('express')
+require('./db/mongoose.js')
+const Appointment = require('./models/appointment')
+const User = require('./models/user')
 const viewsRouter = require('./routers/views')
+const appointmentRouter = require('./routers/appointment')
+const userRouter = require('./routers/user')
 
 
 
@@ -17,8 +22,19 @@ app.set('views', viewsPath)
 app.use(express.json())
 
 app.use(viewsRouter)
+app.use(appointmentRouter)
+app.use(userRouter)
 
-
+// 
+// app.post("/appointment", (req, res) => {
+//     const appointment = new Appointment(req.body)
+//     appointment.save().then((result) => {
+//       res.send(result)
+//     }).catch((error) => {
+//
+//       res.status(400).send(error)
+//     })
+// })
 
 
 app.listen(port, () => {

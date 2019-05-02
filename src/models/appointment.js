@@ -2,25 +2,25 @@ const mongoose = require('mongoose')
 const validator = require('validator')
 
 const Appointment = mongoose.model("Appointment", {
-    Message: {
+    message: {
       type: String,
       required: true,
       trim: true,
       maxlength: 50
     },
-    Info: {
+    info: {
       type: String,
       required: true
     },
-    Time: {
+    time: {
       type: Number,
       required: true
     },
-    Month: {
+    month: {
       type: Number,
       required: true
     },
-    Date: {
+    date: {
       type: Number,
       required: true
     }
