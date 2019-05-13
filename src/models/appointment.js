@@ -23,6 +23,10 @@ const Appointment = mongoose.model("Appointment", {
     date: {
       type: Number,
       required: true
+    },
+    monthName: {
+      type: String,
+      required: true
     }
 })
 

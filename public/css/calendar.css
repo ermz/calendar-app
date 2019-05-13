@@ -1,0 +1,19 @@
+
+#calendar {
+  display: flex;
+  flex-direction: row;
+}
+
+.indi-day-info {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 30px 0px 30px;
+}
+
+.available {
+  color: green;
+}
+
+.unavailable {
+  color: red;
+}
