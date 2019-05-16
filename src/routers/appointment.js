@@ -49,11 +49,11 @@ router.get("/appointments/:month&:date", (req, res) => {
 
 
 // get one specific appointment by month, date and time
-router.get("/appointment/:month&:date&:time", (req, res) => {
+router.get("/appointment/:month&:date&:time", async (req, res) => {
   const month = req.params.month
   const date = req.params.date
   const time = req.params.time
-  Appointment.findOne({ month, date, time }).then((appointment) => {
+  await Appointment.findOne({ month, date, time }).then((appointment) => {
     if (!appointment) {
       return res.status(404).send()
     }

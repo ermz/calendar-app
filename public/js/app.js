@@ -17,15 +17,49 @@ const showIndividualDateFive = document.querySelector("input[name=show-individua
 const showIndividualDateSix = document.querySelector("input[name=show-individual-date-5]")
 const showIndividualDateSeven = document.querySelector("input[name=show-individual-date-6]")
 
+const firstSlot = document.querySelector("#ten")
+const secondSlot = document.querySelector("#eleven")
+const thirdSlot = document.querySelector("#twelve")
+const fourthSlot = document.querySelector("#one")
+const fifthSlot = document.querySelector("#two")
+const sixthSlot = document.querySelector("#three")
+const seventhSlot = document.querySelector("#four")
+
 
 const calendar = document.querySelector("#calendar")
-const testing = document.querySelector("#testing-p")
+var testing = document.querySelector("#testing-p")
 
 showAvailableOne.addEventListener('submit', (e) => {
   e.preventDefault()
 
-  var indiDateArray = showIndividualDateOne.value.split(" ")[0]
+  var indiDateArray = showIndividualDateOne.value.split(" ")
   testing.textContent = indiDateArray
+
+  var timeSlotArr = [10, 11, 12, 1, 2, 3, 4]
+  var timeSlotNameArr = [firstSlot, secondSlot, thirdSlot, fourthSlot, fifthSlot, sixthSlot, seventhSlot]
+
+  var timeSlotObj = { first: firstSlot }
+
+  for (var i = 0; i < timeSlotArr.length; i++) {
+    var currentTimeSlot = timeSlotArr[i]
+    const currentTimeSlotName = timeSlotNameArr[i]
+
+    fetch("/appointment/5" + "&" + indiDateArray[2] + "&" + currentTimeSlot).then((res) => {
+      res.json().then(async (data) => {
+
+        // As long as fetch works, then the code below will also work
+        // Just need to figure out how to pick and choose const names
+        // firstSlot.classList.add("unavailable")
+        // testing.textContent = JSON.stringify(timeSlotObj.name)
+
+        await currentTimeSlotName.classList.add("unavailable")
+
+        // testing.textContent = JSON.stringify(data)
+
+      })
+    })
+  }
+
 })
 
 showAvailableTwo.addEventListener('submit', (e) => {
@@ -33,6 +67,8 @@ showAvailableTwo.addEventListener('submit', (e) => {
 
   var indiDateArray = showIndividualDateTwo.value
   testing.textContent = indiDateArray
+
+
 })
 
 showAvailableThree.addEventListener('submit', (e) => {
