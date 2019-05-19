@@ -2,7 +2,10 @@
   <!-- <form>
     <input type="button" placeholder="hello">
   </form> -->
-  <p id="ten-<%= counter %>" class="available">10</p>
+  <form name="firstAppt-<%= counter %>">
+    <!-- <p id="ten-<%= counter %>" class="available">10 <% currentDay %></p> -->
+    <button id="ten-<%= counter %>" class="available" value="<%= currentDay %>">10AM - 11AM</button>
+  </form>
   <p id="eleven-<%= counter %>" class="available">11</p>
   <p id="twelve-<%= counter %>" class="available">12</p>
   <p id="one-<%= counter %>" class="available">1</p>

@@ -73,6 +73,14 @@ const fifthSlotSeven = document.querySelector("#two-6")
 const sixthSlotSeven = document.querySelector("#three-6")
 const seventhSlotSeven = document.querySelector("#four-6")
 
+const firstApptD1 = document.querySelector("form[name=firstAppt-0]")
+const firstApptD2 = document.querySelector("form[name=firstAppt-1]")
+const firstApptD3 = document.querySelector("form[name=firstAppt-2]")
+const firstApptD4 = document.querySelector("form[name=firstAppt-3]")
+const firstApptD5 = document.querySelector("form[name=firstAppt-4]")
+const firstApptD6 = document.querySelector("form[name=firstAppt-5]")
+const firstApptD7 = document.querySelector("form[name=firstAppt-6]")
+
 const calendar = document.querySelector("#calendar")
 var testing = document.querySelector("#testing-p")
 
@@ -91,7 +99,7 @@ showAvailableOne.addEventListener('submit', (e) => {
     var currentTimeSlot = timeSlotArr[i]
     const currentTimeSlotName = timeSlotNameArr[i]
 
-    fetch("/appointment/5" + "&" + indiDateArray[2] + "&" + currentTimeSlot).then((res) => {
+    fetch("/appointment/" + indiDateArray[1] + "&" + indiDateArray[2] + "&" + currentTimeSlot).then((res) => {
       res.json().then(async (data) => {
 
         // As long as fetch works, then the code below will also work
@@ -124,7 +132,7 @@ showAvailableTwo.addEventListener('submit', (e) => {
     var currentTimeSlot = timeSlotArr[i]
     const currentTimeSlotNameTwo = timeSlotNameArr[i]
 
-    fetch("/appointment/5" + "&" + indiDateArray[2] + "&" + currentTimeSlot).then((res) => {
+    fetch("/appointment/" + indiDateArray[1] + "&" + indiDateArray[2] + "&" + currentTimeSlot).then((res) => {
       res.json().then(async (data) => {
 
         // As long as fetch works, then the code below will also work
@@ -158,7 +166,7 @@ showAvailableThree.addEventListener('submit', (e) => {
     var currentTimeSlot = timeSlotArr[i]
     const currentTimeSlotNameThree = timeSlotNameArr[i]
 
-    fetch("/appointment/5" + "&" + indiDateArray[2] + "&" + currentTimeSlot).then((res) => {
+    fetch("/appointment/" + indiDateArray[1] + "&" + indiDateArray[2] + "&" + currentTimeSlot).then((res) => {
       res.json().then(async (data) => {
 
         // As long as fetch works, then the code below will also work
@@ -191,7 +199,7 @@ showAvailableFour.addEventListener('submit', (e) => {
     var currentTimeSlot = timeSlotArr[i]
     const currentTimeSlotNameFour = timeSlotNameArr[i]
 
-    fetch("/appointment/5" + "&" + indiDateArray[2] + "&" + currentTimeSlot).then((res) => {
+    fetch("/appointment/" + indiDateArray[1] + "&" + indiDateArray[2] + "&" + currentTimeSlot).then((res) => {
       res.json().then(async (data) => {
 
         // As long as fetch works, then the code below will also work
@@ -225,7 +233,7 @@ showAvailableFive.addEventListener('submit', (e) => {
     var currentTimeSlot = timeSlotArr[i]
     const currentTimeSlotNameFive = timeSlotNameArr[i]
 
-    fetch("/appointment/5" + "&" + indiDateArray[2] + "&" + currentTimeSlot).then((res) => {
+    fetch("/appointment/" + indiDateArray[1] + "&" + indiDateArray[2] + "&" + currentTimeSlot).then((res) => {
       res.json().then(async (data) => {
 
         // As long as fetch works, then the code below will also work
@@ -258,7 +266,7 @@ showAvailableSix.addEventListener('submit', (e) => {
     var currentTimeSlot = timeSlotArr[i]
     const currentTimeSlotNameSix = timeSlotNameArr[i]
 
-    fetch("/appointment/5" + "&" + indiDateArray[2] + "&" + currentTimeSlot).then((res) => {
+    fetch("/appointment/" + indiDateArray[1] + "&" + indiDateArray[2] + "&" + currentTimeSlot).then((res) => {
       res.json().then(async (data) => {
 
         // As long as fetch works, then the code below will also work
@@ -291,7 +299,7 @@ showAvailableSeven.addEventListener('submit', (e) => {
     var currentTimeSlot = timeSlotArr[i]
     const currentTimeSlotNameSeven = timeSlotNameArr[i]
 
-    fetch("/appointment/5" + "&" + indiDateArray[2] + "&" + currentTimeSlot).then((res) => {
+    fetch("/appointment/" + indiDateArray[1] + "&" + indiDateArray[2] + "&" + currentTimeSlot).then((res) => {
       res.json().then(async (data) => {
 
         // As long as fetch works, then the code below will also work
@@ -308,6 +316,71 @@ showAvailableSeven.addEventListener('submit', (e) => {
   }
 })
 
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+// ^^^^^^^^ Above code only shows available dates
+
+// BELOW!!! Only to make appointments by individual dates
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+firstApptD1.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  testing.textContent = firstSlot.value
+})
+
+firstApptD2.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  testing.textContent = firstSlotTwo.value
+
+  
+})
+
+firstApptD3.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  testing.textContent = firstSlotThree.value
+})
+
+firstApptD4.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  testing.textContent = firstSlotFour.value
+})
+
+firstApptD5.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  testing.textContent = firstSlotFive.value
+})
+
+firstApptD6.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  testing.textContent = firstSlotSix.value
+})
+
+firstApptD7.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  testing.textContent = firstSlotSeven.value
+})
 
 
 
