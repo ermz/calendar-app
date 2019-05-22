@@ -81,6 +81,56 @@ const firstApptD5 = document.querySelector("form[name=firstAppt-4]")
 const firstApptD6 = document.querySelector("form[name=firstAppt-5]")
 const firstApptD7 = document.querySelector("form[name=firstAppt-6]")
 
+const secondApptD1 = document.querySelector("form[name=secondAppt-0]")
+const secondApptD2 = document.querySelector("form[name=secondAppt-1]")
+const secondApptD3 = document.querySelector("form[name=secondAppt-2]")
+const secondApptD4 = document.querySelector("form[name=secondAppt-3]")
+const secondApptD5 = document.querySelector("form[name=secondAppt-4]")
+const secondApptD6 = document.querySelector("form[name=secondAppt-5]")
+const secondApptD7 = document.querySelector("form[name=secondAppt-6]")
+
+const thirdApptD1 = document.querySelector("form[name=thirdAppt-0]")
+const thirdApptD2 = document.querySelector("form[name=thirdAppt-1]")
+const thirdApptD3 = document.querySelector("form[name=thirdAppt-2]")
+const thirdApptD4 = document.querySelector("form[name=thirdAppt-3]")
+const thirdApptD5 = document.querySelector("form[name=thirdAppt-4]")
+const thirdApptD6 = document.querySelector("form[name=thirdAppt-5]")
+const thirdApptD7 = document.querySelector("form[name=thirdAppt-6]")
+
+const fourthApptD1 = document.querySelector("form[name=fourthAppt-0]")
+const fourthApptD2 = document.querySelector("form[name=fourthAppt-1]")
+const fourthApptD3 = document.querySelector("form[name=fourthAppt-2]")
+const fourthApptD4 = document.querySelector("form[name=fourthAppt-3]")
+const fourthApptD5 = document.querySelector("form[name=fourthAppt-4]")
+const fourthApptD6 = document.querySelector("form[name=fourthAppt-5]")
+const fourthApptD7 = document.querySelector("form[name=fourthAppt-6]")
+
+const fifthApptD1 = document.querySelector("form[name=fifthAppt-0]")
+const fifthApptD2 = document.querySelector("form[name=fifthAppt-1]")
+const fifthApptD3 = document.querySelector("form[name=fifthAppt-2]")
+const fifthApptD4 = document.querySelector("form[name=fifthAppt-3]")
+const fifthApptD5 = document.querySelector("form[name=fifthAppt-4]")
+const fifthApptD6 = document.querySelector("form[name=fifthAppt-5]")
+const fifthApptD7 = document.querySelector("form[name=fifthAppt-6]")
+
+const sixthApptD1 = document.querySelector("form[name=sixthAppt-0]")
+const sixthApptD2 = document.querySelector("form[name=sixthAppt-1]")
+const sixthApptD3 = document.querySelector("form[name=sixthAppt-2]")
+const sixthApptD4 = document.querySelector("form[name=sixthAppt-3]")
+const sixthApptD5 = document.querySelector("form[name=sixthAppt-4]")
+const sixthApptD6 = document.querySelector("form[name=sixthAppt-5]")
+const sixthApptD7 = document.querySelector("form[name=sixthAppt-6]")
+
+const seventhApptD1 = document.querySelector("form[name=seventhAppt-0]")
+const seventhApptD2 = document.querySelector("form[name=seventhAppt-1]")
+const seventhApptD3 = document.querySelector("form[name=seventhAppt-2]")
+const seventhApptD4 = document.querySelector("form[name=seventhAppt-3]")
+const seventhApptD5 = document.querySelector("form[name=seventhAppt-4]")
+const seventhApptD6 = document.querySelector("form[name=seventhAppt-5]")
+const seventhApptD7 = document.querySelector("form[name=seventhAppt-6]")
+
+
+
 const calendar = document.querySelector("#calendar")
 var testing = document.querySelector("#testing-p")
 
@@ -336,53 +386,382 @@ showAvailableSeven.addEventListener('submit', (e) => {
 
 
 
-
+/// 1st appt ///
 
 firstApptD1.addEventListener('submit', (e) => {
   e.preventDefault()
 
-  testing.textContent = firstSlot.value
+  //The idea is to get this to change views carrying the info needed
+  //In confirm.ejs i will have a single button that creates the appointment
+  //With all the information currently available from here
+  //The name and phone number can be added here or the next page
+  //But i need to carry over the available date info
+  window.sessionStorage.setItem("dates", firstSlot.value + " 10")
+
+  window.location.href="/confirm?slot=firstSlot"
 })
 
 firstApptD2.addEventListener('submit', (e) => {
   e.preventDefault()
 
-  testing.textContent = firstSlotTwo.value
+  window.sessionStorage.setItem("dates", firstSlotTwo.value + " 10")
+  window.location.href="/confirm?slot=firstSlotTwo"
 
-  
 })
 
 firstApptD3.addEventListener('submit', (e) => {
   e.preventDefault()
 
-  testing.textContent = firstSlotThree.value
+  window.sessionStorage.setItem("dates", firstSlotThree.value + " 10")
+  window.location.href="/confirm?slot=firstSlotThree"
 })
 
 firstApptD4.addEventListener('submit', (e) => {
   e.preventDefault()
 
-  testing.textContent = firstSlotFour.value
+  window.sessionStorage.setItem("dates", firstSlotFour.value + " 10")
+  window.location.href="/confirm?slot=firstSlotFour"
 })
 
 firstApptD5.addEventListener('submit', (e) => {
   e.preventDefault()
 
-  testing.textContent = firstSlotFive.value
+  window.sessionStorage.setItem("dates", firstSlotFive.value + " 10")
+  window.location.href="/confirm?slot=firstSlotFive"
 })
 
 firstApptD6.addEventListener('submit', (e) => {
   e.preventDefault()
 
-  testing.textContent = firstSlotSix.value
+  window.sessionStorage.setItem("dates", firstSlotSix.value + " 10")
+  window.location.href="/confirm?slot=firstSlotSix"
 })
 
 firstApptD7.addEventListener('submit', (e) => {
   e.preventDefault()
 
-  testing.textContent = firstSlotSeven.value
+  window.sessionStorage.setItem("dates", firstSlotSeven.value + " 10")
+  window.location.href="/confirm?slot=firstSlotSeven"
 })
 
 
+/// 2nd appt ///
+secondApptD1.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", secondSlot.value + " 11")
+
+  window.location.href="/confirm?slot=secondSlot"
+})
+
+secondApptD2.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", secondSlotTwo.value + " 11")
+  window.location.href="/confirm?slot=secondSlotTwo"
+
+})
+
+secondApptD3.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", secondSlotThree.value + " 11")
+  window.location.href="/confirm?slot=secondSlotThree"
+})
+
+secondApptD4.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", secondSlotFour.value + " 11")
+  window.location.href="/confirm?slot=secondSlotFour"
+})
+
+secondApptD5.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", secondSlotFive.value + " 11")
+  window.location.href="/confirm?slot=secondSlotFive"
+})
+
+secondApptD6.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", secondSlotSix.value + " 11")
+  window.location.href="/confirm?slot=secondSlotSix"
+})
+
+secondApptD7.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", secondSlotSeven.value + " 11")
+  window.location.href="/confirm?slot=secondSlotSeven"
+})
+
+
+/// 3rd Appt ///
+thirdApptD1.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", thirdSlot.value + " 12")
+
+  window.location.href="/confirm?slot=thirdSlot"
+})
+
+thirdApptD2.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", thirdSlotTwo.value + " 12")
+  window.location.href="/confirm?slot=thirdSlotTwo"
+
+})
+
+thirdApptD3.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", thirdSlotThree.value + " 12")
+  window.location.href="/confirm?slot=thirdSlotThree"
+})
+
+thirdApptD4.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", thirdSlotFour.value + " 12")
+  window.location.href="/confirm?slot=thirdSlotFour"
+})
+
+thirdApptD5.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", thirdSlotFive.value + " 12")
+  window.location.href="/confirm?slot=thirdSlotFive"
+})
+
+thirdApptD6.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", thirdSlotSix.value + " 12")
+  window.location.href="/confirm?slot=thirdSlotSix"
+})
+
+thirdApptD7.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", thirdSlotSeven.value + " 12")
+  window.location.href="/confirm?slot=thirdSlotSeven"
+})
+
+
+
+/// 4th Appt ///
+fourthApptD1.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", fourthSlot.value + " 1")
+
+  window.location.href="/confirm?slot=fourthSlot"
+})
+
+fourthApptD2.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", fourthSlotTwo.value + " 1")
+  window.location.href="/confirm?slot=fourthSlotTwo"
+
+})
+
+fourthApptD3.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", fourthSlotThree.value + " 1")
+  window.location.href="/confirm?slot=fourthSlotThree"
+})
+
+fourthApptD4.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", fourthSlotFour.value + " 1")
+  window.location.href="/confirm?slot=fourthSlotFour"
+})
+
+fourthApptD5.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", fourthSlotFive.value + " 1")
+  window.location.href="/confirm?slot=fourthSlotFive"
+})
+
+fourthApptD6.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", fourthSlotSix.value + " 1")
+  window.location.href="/confirm?slot=fourthSlotSix"
+})
+
+fourthApptD7.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", fourthSlotSeven.value + " 1")
+  window.location.href="/confirm?slot=fourthSlotSeven"
+})
+
+
+/// 5th Appt ///
+fifthApptD1.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", fifthSlot.value + " 2")
+
+  window.location.href="/confirm?slot=fifthSlot"
+})
+
+fifthApptD2.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", fifthSlotTwo.value + " 2")
+  window.location.href="/confirm?slot=fifthSlotTwo"
+
+})
+
+fifthApptD3.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", fifthSlotThree.value + " 2")
+  window.location.href="/confirm?slot=fifthSlotThree"
+})
+
+fifthApptD4.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", fifthSlotFour.value + " 2")
+  window.location.href="/confirm?slot=fifthSlotFour"
+})
+
+fifthApptD5.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", fifthSlotFive.value + " 2")
+  window.location.href="/confirm?slot=fifthSlotFive"
+})
+
+fifthApptD6.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", fifthSlotSix.value + " 2")
+  window.location.href="/confirm?slot=fifthSlotSix"
+})
+
+fifthApptD7.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", fifthSlotSeven.value + " 2")
+  window.location.href="/confirm?slot=fifthSlotSeven"
+})
+
+
+/// 6th Appt ///
+sixthApptD1.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", sixthSlot.value + " 3")
+
+  window.location.href="/confirm?slot=sixthSlot"
+})
+
+sixthApptD2.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", sixthSlotTwo.value + " 3")
+  window.location.href="/confirm?slot=sixthSlotTwo"
+
+})
+
+sixthApptD3.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", sixthSlotThree.value + " 3")
+  window.location.href="/confirm?slot=sixthSlotThree"
+})
+
+sixthApptD4.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", sixthSlotFour.value + " 3")
+  window.location.href="/confirm?slot=sixthSlotFour"
+})
+
+sixthApptD5.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", sixthSlotFive.value + " 3")
+  window.location.href="/confirm?slot=sixthSlotFive"
+})
+
+sixthApptD6.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", sixthSlotSix.value + " 3")
+  window.location.href="/confirm?slot=sixthSlotSix"
+})
+
+sixthApptD7.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", sixthSlotSeven.value + " 3")
+  window.location.href="/confirm?slot=sixthSlotSeven"
+})
+
+
+/// 7th Appt ///
+seventhApptD1.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", seventhSlot.value + " 4")
+
+  window.location.href="/confirm?slot=seventhSlot"
+})
+
+seventhApptD2.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", seventhSlotTwo.value + " 4")
+  window.location.href="/confirm?slot=seventhSlotTwo"
+
+})
+
+seventhApptD3.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", seventhSlotThree.value + " 4")
+  window.location.href="/confirm?slot=seventhSlotThree"
+})
+
+seventhApptD4.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", seventhSlotFour.value + " 4")
+  window.location.href="/confirm?slot=seventhSlotFour"
+})
+
+seventhApptD5.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", seventhSlotFive.value + " 4")
+  window.location.href="/confirm?slot=seventhSlotFive"
+})
+
+seventhApptD6.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", seventhSlotSix.value + " 4")
+  window.location.href="/confirm?slot=seventhSlotSix"
+})
+
+seventhApptD7.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  window.sessionStorage.setItem("dates", seventhSlotSeven.value + " 4")
+  window.location.href="/confirm?slot=seventhSlotSeven"
+})
 
 
 
