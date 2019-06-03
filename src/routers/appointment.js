@@ -5,6 +5,7 @@ const moment = require('moment')
 
 // create a single appointment
 router.post("/appointment", (req, res) => {
+    console.log(req.body)
     const appointment = new Appointment(req.body)
     appointment.save().then((result) => {
       res.status(201).send(result)
@@ -95,13 +96,13 @@ router.patch("/appointment/:month&:date&:time&:newTime", async (req, res) => {
 
 // Delete a single user based on month, date, time
 // We need to use async and await in order for the deletion to be completed before res.send()
-router.delete("/appointment/:month&:date&:time", async (req, res) => {
-    const month = req.params.month
+router.delete("/appointment/:monthName&:date&:time", async (req, res) => {
+    const monthName = req.params.monthName
     const date = req.params.date
     const time = req.params.time
 
     try {
-      const appointment = await Appointment.findOneAndDelete({ month, date, time})
+      const appointment = await Appointment.findOneAndDelete({ monthName, date, time})
       if (!appointment) {
         return res.status(404).send()
       }
