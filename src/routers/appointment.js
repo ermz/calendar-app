@@ -16,10 +16,6 @@ router.post("/appointment", (req, res) => {
 
 // get all appointments
 router.get("/appointments", (req, res) => {
-  const dateNow = new Date()
-  const tomorrow = new Date(dateNow.getTime() + (24 * 60 * 60 * 30000))
-  console.log(dateNow.toString().slice(0,10))
-  console.log(tomorrow.toString().slice(0, 10))
 
   Appointment.find({}).then((appointments) => {
     if (!appointments) {

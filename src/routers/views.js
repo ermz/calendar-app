@@ -13,6 +13,10 @@ router.get("/confirm", (req, res) => {
   res.render('confirm.ejs')
 })
 
+router.get("/scheduled", (req, res) => {
+  res.render('scheduled.ejs')
+})
+
 
 
 
