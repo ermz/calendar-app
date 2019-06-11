@@ -17,6 +17,9 @@ router.get("/scheduled", (req, res) => {
   res.render('scheduled.ejs')
 })
 
+router.get("/login", (req, res) => {
+  res.render('login.ejs')
+})
 
 
 
