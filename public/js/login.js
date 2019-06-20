@@ -7,11 +7,14 @@ const logoutForm = document.querySelector("form[name=logout]")
 
 // Inputs
 
-const loginUser = document.querySelector("form[name=login-username]")
-const loginPass = document.querySelector("form[name=login-password]")
+const loginUser = document.querySelector("input[name=login-username]")
+const loginPass = document.querySelector("input[name=login-password]")
 
-const signinUser = document.querySelector("form[name=signin-username]")
-const signinPass = document.querySelector("form[name=signin-password]")
+const signinUser = document.querySelector("input[name=signin-username]")
+const signinPass = document.querySelector("input[name=signin-password]")
+
+const loginStatus = document.querySelector(".login-status")
+const loginStatusDiv = document.querySelector(".login-status-div")
 
 
 
@@ -19,13 +22,15 @@ loginForm.addEventListener("submit", async (e) => {
   e.preventDefault()
 
   var loginData = {
+                  "name": "customer " + loginUser.value,
                   "email": loginUser.value,
                   "password": loginPass.value
                   }
 
-  fetch("/users/login", { method: "POST", headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(loginData) }).then((res) => {
+  fetch("/users", { method: "POST", headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(loginData) }).then((res) => {
     res.json().then((data) => {
 
+    loginStatus.textContent = 'this was a successful login'
 
     })
   })
@@ -35,21 +40,19 @@ loginForm.addEventListener("submit", async (e) => {
 signinForm.addEventListener("submit", async (e) => {
   e.preventDefault()
 
-  var siginData = {
-                    "name": signinUser.value,
+  var signinData = {
                     "email": signinUser.value,
                     "password": signinPass.value
-                  }
+  }
 
-
-  fetch("/users", { method: "POST", headers: {"Content-Type": "application/json" }, body: JSON.stringify(signinData) }).then((res) => {
+  fetch("/users/login", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(signinData) }).then((res) => {
     res.json().then((data) => {
 
+      loginStatus.textContent = "yay sigin was successful"
 
     })
   })
 })
-
 
 
 logoutForm.addEventListener("submit", (e) => {
@@ -57,8 +60,8 @@ logoutForm.addEventListener("submit", (e) => {
 
   fetch("/users/logout", { method: "POST", headers: {"Content-Type": "application/json"}}).then((res) => {
     res.json().then((data) => {
+      loginStatus.textContent = "this was log out"
 
-      
     })
   })
 })

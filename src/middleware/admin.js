@@ -12,7 +12,7 @@ const admin = async (req, res, next) => {
     }
 
     if (user.email !== "eramirez4369@gmail.com") {
-      throw new Error()
+      throw new Error("Permission Denied")
     }
 
     req.token = token
