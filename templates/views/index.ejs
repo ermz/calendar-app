@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Julius Sans One">
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="/css/header.css">
   </head>
 
   <body>
     <%- include header.ejs %>
+
+    <div class="banner-img">
+      <div class="banner-info">
+        <h1>Need a phone repair ?</h1>
+        <p>Don't let a broken screen stop you from doing what you want.</p>
+        <button class="banner-button" onclick="window.location.href = '/calendar';">make an appointment</button>
+      </div>
+    </div>
 
     <h1>Hello World</h1>
     <% const date = new Date() %>
     <p><%= date.toString().slice(0,10) %> is the date</p>
 
 
+    <%- include footer.ejs %>
 
 
     <script src="/js/header.js"></script>

@@ -1,0 +1,48 @@
+.header-whole {
+  background-color: #d5dbdb;
+}
+
+.container-outside {
+  background-color: #d5dbdb;
+  height: 40px;
+}
+
+.header-row {
+
+}
+
+.header-logo-div {
+  margin-top: 10px;
+}
+
+.header-buttons-div {
+  margin-top: 7px;
+}
+
+.header-button {
+  border-radius: 25px;
+}
+
+.logo {
+  color: #ec2131;
+  text-decoration: underline overline;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+
+
+
+
+
+/* footer */
+
+.footer-container {
+  background-color: #d5dbdb;
+  height: 100%;
+}
+
+.bottom-logo-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
