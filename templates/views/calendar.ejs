@@ -3,8 +3,18 @@
 
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/calendar.css">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Julius Sans One|News Cycle">
+
+
+    <link rel="stylesheet" href="/css/calendar.css">
+    <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/app.css">
   </head>
 
@@ -12,30 +22,31 @@
 
     <%- include header.ejs %>
 
-    <h1>Hello Calendar app</h1>
-    <form name="show-calendar">
-      <% const firstDay = new Date() %>
-      <%= new Date(firstDay.getTime() + (24 * 60 * 60 * 30000)).toString().slice(0,10).split(" ")[0] %>
-      <input type="button" id="name"  placeholder="hello"/>
-      <button><%= firstDay %></button>
-    </form>
-
 
     <p id="testing-p">hello testing</p>
 
+    <div class="calendar-banner">
+      <h1>Make an Appointment</h1>
+      <h5>These appointments are for cellphone screen repair. Appointments are only available for up to one week in advance. If you need a custom repais or make an appointment for a later date please contact us.
+       Call us at (407)000-000 or email us at example@gmail.com.</h5>
 
-    <div id="calendar"></p>
+    </div>
+
+
+
+
+    <div id="calendar">
+      <% const firstDay = new Date() %>
       <% var dayCounter = 0 %>
       <% var counter = 0 %>
       <% while (counter < 7) { %>
         <% var currentDay = new Date(firstDay.getTime() + (24 * 60 * 60 * dayCounter)).toString().slice(0,10) %>
         <% var currentDayArr = currentDay.split(" ") %>
-
         <% if (currentDayArr[0] !== "Sat" && currentDayArr[0] !== "Sun") { %>
           <div class="indi-day-info">
             <form name="show-available-dates-<%= counter %>">
               <input type="hidden" name="show-individual-date-<%= counter %>"  value="<%= currentDay %>"/>
-              <button><%= currentDay %></button>
+              <button class="current-day-button"><%= currentDay %></button>
             </form>
             <div class="show-slot">
               <%- include slots.ejs %>
@@ -43,11 +54,11 @@
           </div>
           <% counter += 1 %>
         <% } %>
-
-
         <% dayCounter += 1000 %>
       <% } %>
     </div>
+
+    <%- include footer.ejs %>
 
     <script src="/js/app.js"></script>
     <script src="/js/header.js"></script>

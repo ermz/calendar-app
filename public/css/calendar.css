@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   padding: 0px 30px 0px 30px;
+  width: 185px;
 }
 
 .available {
@@ -16,4 +17,36 @@
 
 .unavailable {
   color: red;
+  pointer-events: none;
+}
+
+.appt-button {
+  border-radius: 15px;
+  font-family: 'Mukta', sans-serif;
+}
+
+.appt-button-form {
+  padding-top: 20px;
+}
+
+.slots-container {
+  padding-left: 0px;
+}
+
+.current-day-button {
+  border-radius: 8px;
+  background-color: #ec2131;
+  color: white;
+  font-family: "News Cycle", sans-serif;
+}
+
+.calendar-banner {
+  margin: 0 auto;
+  width: 500px;
+  text-align: center;
+  background-color: white;
+}
+
+form {
+  width: 185px;
 }

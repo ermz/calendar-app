@@ -1,5 +1,5 @@
 
-const showCalendar = document.querySelector("form[name=show-calendar]")
+
 
 const showAvailableOne = document.querySelector("form[name=show-available-dates-0]")
 const showAvailableTwo = document.querySelector("form[name=show-available-dates-1]")
