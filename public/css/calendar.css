@@ -2,12 +2,25 @@
 #calendar {
   display: flex;
   flex-direction: row;
+  background-color: white;
+  max-width: 878px;
+  margin: 0 auto;
+  padding: 10px 15px 10px 15px;
+}
+
+.calendar-top {
+  max-width: 878px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #4a7774;
+  color: white;
+  padding: 5px 0px 5px 0px;
 }
 
 .indi-day-info {
   display: flex;
   flex-direction: column;
-  padding: 0px 30px 0px 30px;
+  padding: 0px 10px 0px 10px;
   width: 185px;
 }
 
@@ -22,6 +35,7 @@
 
 .appt-button {
   border-radius: 15px;
+  background-color: #e4e4e4;
   font-family: 'Mukta', sans-serif;
 }
 
@@ -35,18 +49,20 @@
 
 .current-day-button {
   border-radius: 8px;
-  background-color: #ec2131;
+  background-color: #6699cc;
   color: white;
   font-family: "News Cycle", sans-serif;
 }
 
 .calendar-banner {
   margin: 0 auto;
-  width: 500px;
   text-align: center;
-  background-color: white;
+  background-image: linear-gradient(#6996ad, white);
+}
+
+.calendar-banner h1, h5{
+  font-family: "News Cycle", sans-serif;
 }
 
 form {
-  width: 185px;
 }
