@@ -27,3 +27,30 @@ body {
   border-radius: 25px;
   background-color: #ec2131;
 }
+
+.service-title {
+  text-align: center;
+  background-color: #4a7774;
+  width: 150px;
+  heigth: 100px;
+  margin: 0 auto;
+  border-radius: 25px;
+  color: white;
+}
+
+.service-div {
+  width: 850px;
+  margin: 0 auto;
+}
+
+.broken-screen-div {
+  background-image: url("../images/screen-2.jpg");
+}
+
+.button-malfunction-div {
+  background-image: url("../images/button-2.jpg");
+}
+
+.not-charging-div {
+  background-image: url("../images/battery-2.jpg");
+}
