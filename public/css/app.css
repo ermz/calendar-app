@@ -1,5 +1,5 @@
 body {
-  background-color: #c3e4ed;
+  background-color: white;
   height: 100%;
 }
 
@@ -40,17 +40,94 @@ body {
 
 .service-div {
   width: 850px;
+  max-width: 850px;
   margin: 0 auto;
 }
 
+.service-col h4 {
+  font-family: "Merriweather", sans-serif;
+}
+
 .broken-screen-div {
+  width: 250px;
+  height: 150px;
+  max-width: 250px;
+  max-height: 150px;
   background-image: url("../images/screen-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 15px;
 }
 
 .button-malfunction-div {
+  width: 250px;
+  height: 150px;
   background-image: url("../images/button-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 15px;
 }
 
 .not-charging-div {
-  background-image: url("../images/battery-2.jpg");
+  width: 250px;
+  height: 150px;
+  background-image: url("../images/battery-2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 15px;
+}
+
+.service-col {
+  text-align: center;
+}
+
+.service-text {
+  padding-top: 10px;
+  text-align: center;
+  font-family: "Literata", sans-serif;
+}
+
+.appointment-article {
+  padding: 45px 0px 45px 0px;
+  text-align: center;
+  width: 850px;
+  margin: 0 auto;
+  font-family: "Merriweather", sans-serif;
+}
+
+.appointment-article {
+  font-family: "Literate", sans-serif;
+}
+
+.lower-banner {
+  background-color: #436eee;
+  text-align: center;
+}
+
+.lower-banner-title {
+  color: white;
+  font-family: "Merriweather", sans-serif;
+}
+
+.lower-banner-title:first-child {
+  padding-top: 20px;
+}
+
+.lower-banner-flex {
+  padding-top: 13px;
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 850px;
+  font-family: "Literata", sans-serif;
+  padding-bottom: 20px;
+}
+
+.lower-banner-flex-child {
+  width: 275px;
 }

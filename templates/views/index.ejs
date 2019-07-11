@@ -9,7 +9,7 @@
 
 
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Julius Sans One">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Julius Sans One|Literata|Merriweather">
   <link rel="stylesheet" href="/css/app.css">
   <link rel="stylesheet" href="/css/header.css">
   </head>
@@ -32,48 +32,71 @@
     <div class="service-div container">
       <div class="row">
 
-        <div class="col-sm-4">
+        <div class="col-sm-4 service-col">
           <h4>Broken Screen?</h4>
-          <div class="row">
-            <div class="col-sm-6 broken-screen-div img-responsive">
-              bye
+
+            <div class="broken-screen-div">
+
             </div>
-            <div class="col-sm-6">
-              bye
+            <div class="service-text">
+              <p>
+                Cracked screens or malfunctioning LCDs we can fix all.
+              </p>
             </div>
-          </div>
+
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-4 service-col">
           <h4>Button Malfunction?</h4>
-          <div class="row">
-            <div class="col-sm-6 button-malfunction-div img-responsive">
-              bye
+
+            <div class="button-malfunction-div">
             </div>
-            <div class="col-sm-6">
-              bye
+            <div class="service-text">
+              <p>
+                Wether the side buttons are out of place or if touch id is malfunctioning. We can fix or replace buttons.
+              </p>
             </div>
-          </div>
+
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-4 service-col">
           <h4>Not Charging?</h4>
-          <div class="row">
-            <div class="col-sm-6 not-charging-div img-responsive">
-              bye
+
+            <div class="not-charging-div">
             </div>
-            <div class="col-sm-6">
-              bye
+            <div class="service-text">
+              <p>
+                We can replace malfunctioning batteries or fix charging port  depending on problem.
+              </p>
             </div>
           </div>
-        </div>
 
       </div>
     </div>
 
-    <h1>Hello World</h1>
-    <% const date = new Date() %>
-    <p><%= date.toString().slice(0,10) %> is the date</p>
+
+    <article class="appointment-article">
+
+      <h3>Appointments</h3>
+
+      We know you live busy lives and appointment availability isn't always ideal. We'll try our best to
+      make an appointment work for you. Even if that means meeting outside of regurlay scheduled hours or meeting
+      you half way if you live further away. Please let us know if this applies to you, so that we can better
+      arrange an appointment for repair. You can call us at (407)123-4567 or send us an email at example@gmail.com.
+    </article>
+
+    <div class="lower-banner">
+      <h4 class="lower-banner-title">100% satisfaction guaranteed.</h4>
+      <h4 class="lower-banner-title">We'll continue to work with customer until they are satisfied.</h4>
+
+      <div class="lower-banner-flex">
+        <p class="lower-banner-flex-child">Our specialist has an abundance of experience working with repairs all throughout the central Florida area.</p>
+        <p class="lower-banner-flex-child">Product repairs have a 60 day warranties. We'll replace defective parts for no additional cost.</p>
+        <p class="lower-banner-flex-child">If for any reason you are dissatisfied. We'll refund you your money no questions asked.</p>
+      </div>
+
+
+    </div>
 
 
     <%- include footer.ejs %>

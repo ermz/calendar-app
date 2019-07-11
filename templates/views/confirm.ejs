@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/css/calendar.css">
 
     <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/confirm.css">
   </head>
 
   <body>
@@ -13,13 +14,25 @@
     <%- include header.ejs %>
 
 
-    <p id="confirmation-test">Here's where I'm testing</p>
+
+
 
     <form name="appointment-form">
       <input name="phoneNumber"></input>
       <input name="issueText"></input>
       <button>Submit</button>
     </form>
+
+
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="confirmation-test">Here's where I'm testing</p>
+      </div>
+
+    </div>
 
 
     <form name="confirm-testing">
