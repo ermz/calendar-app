@@ -3,9 +3,14 @@
 
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/calendar.css">
 
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Julius Sans One|Literata|Merriweather">
+
+    <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/confirm.css">
   </head>
 
@@ -14,13 +19,17 @@
     <%- include header.ejs %>
 
 
+    <h2>Confirm Appointment</h2>
 
+    <article class="confirm-text">
+      Below leave a phone number and reason for appointment. Please keep in mind appointments are an hour long.
+      If you have any special request regarding the appointment, please call (407)123-4567 or email us at example@gmail.com.
+    </article>
 
-
-    <form name="appointment-form">
-      <input name="phoneNumber"></input>
-      <input name="issueText"></input>
-      <button>Submit</button>
+    <form name="appointment-form" class="appointment-form">
+      <input name="phoneNumber" class="input-number" placeholder="ex. 4071234567"></input>
+      <textarea name="issueText" type="text" class="input-message" rows="10" cols="30" placeholder="Briefly describe repair you need help with."></textarea>
+      <button class="confirm-button">Make Appointment</button>
     </form>
 
 
@@ -29,16 +38,13 @@
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p id="confirmation-test">Here's where I'm testing</p>
+        <div id="confirmation-test"></div>
       </div>
 
     </div>
 
+    <%- include footer.ejs %>
 
-    <form name="confirm-testing">
-      <button>heelo</button>
-
-    </form>
 
     <script src="/js/confirm.js"></script>
     <script src="/js/header.js"></script>

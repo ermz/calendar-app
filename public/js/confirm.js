@@ -1,9 +1,8 @@
 const appointmentForm = document.querySelector("form[name=appointment-form]")
-const confirmTesting = document.querySelector("form[name=confirm-testing]")
 const confirmationTest = document.querySelector("#confirmation-test")
 
 const phoneNumber = document.querySelector("input[name=phoneNumber]")
-const issueText = document.querySelector("input[name=issueText]")
+const issueText = document.querySelector("textarea[name=issueText]")
 
 var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close")[0];
@@ -35,7 +34,8 @@ appointmentForm.addEventListener('submit', async (e) => {
     res.json().then((data) => {
 
 
-      confirmationTest.textContent = JSON.stringify(data)
+      // confirmationTest.textContent = JSON.stringify(data)
+      confirmationTest.innerHTML = `<p>` + `You're appointment is on ` + data.monthName + ` ` + data.date + ` at ` + data.time + `.` + `    Technician: Juan C.` + `</p>`
     })
   })
 

@@ -1,4 +1,71 @@
+h2 {
+  text-align: center;
+  font-family: "Literate", sans-serif;
+}
 
+.confirm-text {
+  text-align: center;
+  font-family: "Merriweather", sans-serif;
+  max-width: 750px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.appointment-form {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.input-number {
+  margin: 0 auto;
+  display: block;
+  border: 3px solid white;
+  padding: 4px;
+  width: 240px;
+
+  -webkit-box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    -moz-box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+}
+
+.input-message {
+  margin: 0 auto;
+  display: block;
+  border: 3px solid white;
+  padding: 4px;
+
+  -webkit-box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    -moz-box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+}
+
+input[name=phoneNumber] {
+  margin-bottom: 15px;
+}
+
+textarea[name=issueText] {
+  margin-bottom: 15px;
+}
+
+.confirm-button {
+  display: block;
+  border-radius: 25px;
+  margin: 0 auto;
+  color: white;
+  background-color: #436eee;
+}
 
 .modal {
   display: none;
